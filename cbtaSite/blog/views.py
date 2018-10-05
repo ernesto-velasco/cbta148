@@ -13,7 +13,7 @@ def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
     sliders = Slider.objects.all().order_by('position')
     page = request.GET.get('page',1)
-    paginator = Paginator(posts,6) #Show 6 element for page
+    paginator = Paginator(posts,2) #Show 6 element for page
     try:
         posts = paginator.page(page)
     except PageNotAnInteger:
