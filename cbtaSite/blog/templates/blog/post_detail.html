@@ -1,0 +1,55 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+{% show_post_images sourse content.pk as images %}
+{% show_post_files sourse content.pk as files %}
+{% load filename %}
+<div class="container post-content">
+    <div class="col s12 m9">
+        <div class="card">
+            {% if content.banner_image %}
+            <div class="card-image">
+                <img class="responsive-img" src="{{content.banner_image.url}}" alt="Error al cargar la imagen.">
+            </div>
+            {% endif %}
+            <div class="card-content">
+                <div class="card__meta">
+                    <time>{{ content.published_date }}</time>
+                </div>
+                <span class="card-title"><h4><a href="{% url 'post_detail' pk=content.pk %}">{{ content.title }}</a></h4></span>
+                <p>{{ content.text|linebreaksbr }}</p>
+                {% if images %}
+                <h4>Galeria</h4>
+                <div class="container">
+                    <div class="row">
+                        {% for image in images %}
+                        <div class="col s12 m4">
+                            <img class="materialboxed responsive-img" src="{{image.image.url}}">
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+                {% if files %}
+                <h4>Archivos</h4>
+                <div class="container">
+                    <div class="row">
+                        {% for file in files %}
+                        <ul>
+                            <li><a href="{{file.file.url}}" target="_blank">{{file.file | getfilename}} ({{file.file.size|filesizeformat}})</a></li>
+                        </ul>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var elems = document.querySelectorAll('.materialboxed');
+        options = {}
+        var instances = M.Materialbox.init(elems, options);
+    });
+</script>
+{% endblock %}
