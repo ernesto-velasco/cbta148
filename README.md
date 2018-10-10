@@ -1,7 +1,7 @@
 # CBTA148
 Web project for a school to accredit social service.
 ## Built With
-* htm
+* html
 * css
 * Python 3.7
 * [Django](https://www.djangoproject.com/) - Python Web framework
