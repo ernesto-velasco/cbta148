@@ -1,6 +1,6 @@
 # CBTA148
 Web project for a school to accredit social service.
-## Builded With
+## Built With
 * htm
 * css
 * Python 3.7
