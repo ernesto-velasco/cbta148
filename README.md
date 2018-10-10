@@ -4,7 +4,7 @@ Web project for a school to accredit social service.
 * html
 * css
 * Python 3.7
-* [Django](https://www.djangoproject.com/) - Python Web framework
+* [Django 2.1](https://www.djangoproject.com/) - Python Web framework
 * [Materialize](https://materializecss.com/) - css framework
 
 
