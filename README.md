@@ -3,7 +3,7 @@ Web project for a school to accredit social service.
 ## Built With
 * html
 * css
-* Python 3.7
+* [Python 3.7](https://www.python.org/)
 * [Django 2.1](https://www.djangoproject.com/) - Python Web framework
 * [Materialize](https://materializecss.com/) - css framework
 
@@ -63,4 +63,4 @@ http://cbta148.pythonanywhere.com/
 ## Authors
 * [Velasco González Ernesto](https://github.com/vegonz/)
 * Reyes Reyes Vanessa
-* Rios Mancilla Christian
+* [Rios Mancilla Christian](https://github.com/chris182xD)
