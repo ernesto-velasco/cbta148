@@ -57,9 +57,6 @@ To add content enter this link with the super user credentials and add content t
 localhost:8000/admin
 ```
 
-See it in action on a test host
-http://cbta148.pythonanywhere.com/
-
 ## Authors
 * [Velasco González Ernesto](https://github.com/vegonz/)
 * Reyes Reyes Vanessa
